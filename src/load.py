@@ -1,12 +1,9 @@
-import torch
-from src import model as m
-import wikipedia
-import time
-from urllib.request import urlopen
-from googlesearch import search
-import en_core_web_sm
 from enum import Enum
+
 import regex as re
+import torch
+
+from src import model as m
 
 
 class QuestionResults(Enum):
