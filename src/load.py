@@ -66,6 +66,7 @@ def find_reference_scp(num):
     # Collapse newlines
     ref = '\n'.join(filter(None, ref.split('\n')))
 
+    # Cap words
     ref = ' '.join(ref.split(' ')[:200])
 
     return ref
