@@ -30,4 +30,5 @@ Question about SCP-173 is currently broken because reference is hard capped at 2
 
 ## Thanks to
 
-Lada Nuzhna ([@ladanuzhna](https://github.com/ladanuzhna)) for guidance and, not gonna lie, a big chunk of the source code 
+**Lada Nuzhna** ([@ladanuzhna](https://github.com/ladanuzhna)) for guidance and, not gonna lie, a big chunk of the source code. Check out her repo at [ladanuzhna/Question-Answering-BERT
+](https://github.com/ladanuzhna/Question-Answering-BERT)
