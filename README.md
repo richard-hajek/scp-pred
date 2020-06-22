@@ -4,11 +4,20 @@ This is a DNN model which's goal is to understand, categorize and describe indiv
 
 ## Setup
 
-It would be advisable to create a virtual environment before continuing.
+Currently tested on Python 3.8
 
 ```shell script
+git clone --recursive git@github.com:richard-hajek/scp-pred.git
+cd scp-pred
+python3 -m venv venv && source venv/bin/activate # Skip if you don't wanna use venv
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
+```
+
+then you can
+
+```shell script
+python -m src.main
 ```
 
 ## Example run:

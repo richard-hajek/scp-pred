@@ -17,7 +17,7 @@ class QuestionResults(Enum):
 def ask_question(question, scp, model_=None, tokenizer_=None):
     print("Question:", question)
     reference = find_reference_scp(scp)
-    print("Reference:\n", reference)
+    #print("Reference:\n", reference)
 
     if len(reference) == 0:
         return QuestionResults.NO_REF_FOUND, "[NO REF FOUND]"
