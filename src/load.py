@@ -17,7 +17,7 @@ class QuestionResults(Enum):
 def ask_question(question, scp, model_=None, tokenizer_=None):
     print("Question:", question)
     reference = find_reference_scp(scp)
-    #print("Reference:\n", reference)
+    # print("Reference:\n", reference)
 
     if len(reference) == 0:
         return QuestionResults.NO_REF_FOUND, "[NO REF FOUND]"
@@ -50,68 +50,6 @@ def recreate_answer(tokens, start, end):
         else:
             answer += ' ' + tokens[i]
     return answer
-
-
-def find_reference(question):
-    return wikipedia.summary(question, sentences=7)
-
-
-def find_references2(question):
-    entities = extract_entities(question)
-    summaries = []
-    for entity in entities:
-        try:
-            summaries.append(wikipedia.summary(entity, sentences=10))
-        except:
-            continue
-    if len(summaries) == 0:
-        try:
-            return wikipedia.summary(question, sentences=10)
-        except:
-            print("Sorry, the information was not found")
-    return summaries
-
-
-def extract_entities(question):
-    wanted = ['ORG', 'PERSON', 'GPE', 'LOC', 'WORK_OF_ART', 'LAW', 'NORP', 'FAC', 'PRODUCT', 'EVENT']
-    nlp = en_core_web_sm.load()
-    doc = nlp(question)
-    ents = [X.text for X in doc.ents if X.label_ in wanted]
-    return ents
-
-
-def find_references(question, NUM_OF_REF=3):
-    # Finds a specified number of references for the question asked
-    references = []
-    generator = search(question, tld='com', lang='en', num=NUM_OF_REF)
-    for link in generator:
-        text = extract_passage(link)
-        references.append(text)
-    references.append(wikipedia.summary(question, sentences=5))
-    return references
-
-
-def extract_passage(url):
-    try:
-        html = urlopen(url).read()
-        time.sleep(20)
-    except:
-        print("Waiting didn't really help")
-    soup = wikipedia.BeautifulSoup(html)
-
-    # kill all script and style elements
-    for script in soup(["script", "style"]):
-        script.extract()  # rip it out
-
-    # get text
-    text = soup.body.get_text()
-
-    # break into lines and remove leading and trailing space on each
-    lines = (line.strip() for line in text.splitlines())
-    # break multi-headlines into a line each
-    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-    # drop blank lines
-    text = '\n'.join(chunk for chunk in chunks if chunk)
 
 
 def find_reference_scp(num):
