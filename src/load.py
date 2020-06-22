@@ -6,6 +6,7 @@ from urllib.request import urlopen
 from googlesearch import search
 import en_core_web_sm
 from enum import Enum
+import regex as re
 
 
 class QuestionResults(Enum):
@@ -13,16 +14,17 @@ class QuestionResults(Enum):
     NO_REF_FOUND = 2
 
 
-def ask_question(question, scp):
-
+def ask_question(question, scp, model_=None, tokenizer_=None):
     print("Question:", question)
-    reference = find_reference_scp("515-arc")
+    reference = find_reference_scp(scp)
     print("Reference:\n", reference)
 
     if len(reference) == 0:
         return QuestionResults.NO_REF_FOUND, "[NO REF FOUND]"
 
-    model_, tokenizer_ = m.get_model()
+    if model_ is None:
+        model_, tokenizer_ = m.get_model()
+
     encoded = tokenizer_.encode_plus(question, reference)
     token_type_ids = encoded['token_type_ids']
 
@@ -113,14 +115,22 @@ def extract_passage(url):
 
 
 def find_reference_scp(num):
-    ref = None
-    with open(f"/home/meowxiik/scp-wiki/scp-{num}.txt") as f:
-        ref = f.readlines()
+    with open(f"/home/meowxiik/Cloud/Projects/scp-pred/wiki/scp-{num}.txt") as f:
+        ref = f.read()
 
-    beginning = ref.index(next(obj for obj in ref if obj.__contains__("**Item #:**")))
+    # Remove all [[>]] ... [[\>]] sections
+    ref = re.sub(r'\[\[\>\]\](\n.*)*\[\[\/>]]', '', ref, re.DOTALL)
 
-    ref = " ".join(ref[beginning:])
-    ref = ref[:]
-    # ref = ref.replace("█", "x")
+    # Remove all [[div]] ... [[/div]] sections
+    ref = re.sub(r'\[\[div(.*)(\n.*)*\[\[\/div\]\]', '', ref, re.DOTALL)
+
+    # Remove formatting **, +++
+    ref = re.sub(r'\*\*', '', ref)
+    ref = re.sub(r'\+\+\+', '', ref)
+
+    # Collapse newlines
+    ref = '\n'.join(filter(None, ref.split('\n')))
+
+    ref = ' '.join(ref.split(' ')[:200])
 
     return ref
