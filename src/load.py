@@ -53,7 +53,7 @@ def recreate_answer(tokens, start, end):
 
 
 def find_reference_scp(num):
-    with open(f"/home/meowxiik/Cloud/Projects/scp-pred/wiki/scp-{num}.txt") as f:
+    with open(f"wiki/scp-{num}.txt") as f:
         ref = f.read()
 
     # Remove all [[>]] ... [[\>]] sections
