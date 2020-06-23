@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What is SCP-555",
+        "reference": "Object Class: Euclid\nDescription: SCP-555 is a metal cylinder with rounded ends, 1.25 centimeters in diameter and 8 centimeters long, similar to a magnet commonly fed to cattle to prevent hardware disease. It emits a field of unknown nature which exerts an attractive force on dead or necrotic human tissue, including hair separated from the body, corpses, shed skin cells, and, in extreme cases, the epidermal layer of the skin. This field does not tend to follow the inverse-square law and does not interact with matter or electromagnetic fields in a manner consistent with any known force. The SCP itself appears to be impervious to force, showing no response to focused heating, compression, or striking.\nThe attractive force exerted by the field increases linearly with the amount of dead material in close proximity to the SCP. Past a certain point (measured at approximately 295 kilograms of necrotic material within two meters of the SCP), the progression becomes exponential, and the field's strength and radius increase rapidly. \nThe field also appears to have an effect on permanent magnets; the field strength of magnets in proximity to SCP-555 decreases over time, with the rate of decrease changing in proportion to SCP-555's field strength. \nSCP-555",
+        "answer": "a metal cylinder with rounded ends"
+    },
+    {
+        "question": "Who created SCP-173",
+        "reference": "Object class: Euclid \nDescription: Moved to Site19 1993. Origin is as of yet unknown. It is constructed from concrete and rebar with traces of Krylon brand spray paint. SCP-173 is animate and extremely hostile. The object cannot move while within a direct line of sight. Line of sight must not be broken at any time with SCP-173. Personnel assigned to enter container are instructed to alert one another before blinking. Object is reported to attack by snapping the neck at the base of the skull, or by strangulation. In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures. \nPersonnel report sounds of scraping stone originating from within the container when no one is present inside. This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty. \nThe reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.",
+        "answer": "origin is as of yet unknown . it is constructed from concrete and rebar with traces of krylon brand spray paint"
+    },
+    {
+        "question": "What is object class of SCP-222",
+        "reference": "Object Class: Euclid\nDescription: SCP-222 designates an area of tunnels in the Dolomites mountains, near Aviano, Italy. The site is close to the Church of St. Gregory, and Aviano Air Force Base is also nearby. The tunnels are filled with carved stone coffins; one coffin in particular has unusual properties, and some portion of the tunnels is also involved. The carvings in the tunnels appear very old and of fairly good workmanship.",
+        "answer": "euclid"
+    },
+    {
+        "question": "What is SCP-555",
+        "reference": "Object Class: Euclid\nDescription: SCP-555 is a metal cylinder with rounded ends, 1.25 centimeters in diameter and 8 centimeters long, similar to a magnet commonly fed to cattle to prevent hardware disease. It emits a field of unknown nature which exerts an attractive force on dead or necrotic human tissue, including hair separated from the body, corpses, shed skin cells, and, in extreme cases, the epidermal layer of the skin. This field does not tend to follow the inverse-square law and does not interact with matter or electromagnetic fields in a manner consistent with any known force. The SCP itself appears to be impervious to force, showing no response to focused heating, compression, or striking.\nThe attractive force exerted by the field increases linearly with the amount of dead material in close proximity to the SCP. Past a certain point (measured at approximately 295 kilograms of necrotic material within two meters of the SCP), the progression becomes exponential, and the field's strength and radius increase rapidly. \nThe field also appears to have an effect on permanent magnets; the field strength of magnets in proximity to SCP-555 decreases over time, with the rate of decrease changing in proportion to SCP-555's field strength. \nSCP-555",
+        "answer": "a metal cylinder with rounded ends"
+    },
+    {
+        "question": "Who created SCP-173",
+        "reference": "Object class: Euclid \nDescription: Moved to Site19 1993. Origin is as of yet unknown. It is constructed from concrete and rebar with traces of Krylon brand spray paint. SCP-173 is animate and extremely hostile. The object cannot move while within a direct line of sight. Line of sight must not be broken at any time with SCP-173. Personnel assigned to enter container are instructed to alert one another before blinking. Object is reported to attack by snapping the neck at the base of the skull, or by strangulation. In the event of an attack, personnel are to observe Class 4 hazardous object containment procedures. \nPersonnel report sounds of scraping stone originating from within the container when no one is present inside. This is considered normal, and any change in this behaviour should be reported to the acting HMCL supervisor on duty. \nThe reddish brown substance on the floor is a combination of feces and blood. Origin of these materials is unknown. The enclosure must be cleaned on a bi-weekly basis.",
+        "answer": "origin is as of yet unknown . it is constructed from concrete and rebar with traces of krylon brand spray paint"
+    },
+    {
+        "question": "What is object class of SCP-222",
+        "reference": "Object Class: Euclid\nDescription: SCP-222 designates an area of tunnels in the Dolomites mountains, near Aviano, Italy. The site is close to the Church of St. Gregory, and Aviano Air Force Base is also nearby. The tunnels are filled with carved stone coffins; one coffin in particular has unusual properties, and some portion of the tunnels is also involved. The carvings in the tunnels appear very old and of fairly good workmanship.",
+        "answer": "euclid"
+    },
+    {
+        "question": "What is SCP-055?",
+        "reference": "Object Class: Keter \nDescription: SCP-055 is a \"self-keeping secret\" or \"anti-meme\". Information about SCP-055's physical appearance as well as its nature, behavior, and origins is self-classifying. To clarify: ",
+        "answer": "a \" self - keeping secret \" or \" anti - meme \""
+    },
+    {
+        "question": "Is SCP-343 a God?",
+        "reference": "Object Class: Safe\nDescription: SCP-343 is a male, seemingly race-less, humanoid in appearance with apparent omnipotence. SCP-343 was discovered walking the streets of Prague and detained after a staff member witnessed him disappear from the streets and reappear on a rooftop. SCP-343 is detained willingly in his chamber, as containment has proved impossible (see notes).",
+        "answer": "apparent omnipotence"
+    }
+]
