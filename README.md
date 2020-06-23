@@ -26,8 +26,8 @@ python -m src.main
 Question: What is SCP-555
 Answer:  a metal cylinder with rounded ends
 
-Question: What is SCP-173
-Answer:  title : scp - 173 item # : scp - 173
+Question: Who created SCP-173
+Answer:  origin is as of yet unknown . it is constructed from concrete and rebar with traces of krylon brand spray paint
 
 Question: What is object class of SCP-222
 Answer:  euclid
@@ -35,7 +35,6 @@ Answer:  euclid
 Process finished with exit code 0
 ```
 
-Question about SCP-173 is currently broken because reference is hard capped at 200 words first words of an article and that's just not gonna cut it every time.
 
 ## Thanks to
 
