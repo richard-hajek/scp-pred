@@ -3,15 +3,15 @@
 from collections import defaultdict
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import urllib.parse
-
-PORT_NUMBER = 8080
-
 from src import load
 from src.load import *
 
+PORT_NUMBER = 8080
+
+
 # This class will handle any incoming request from
 # a browser
-class myHandler(BaseHTTPRequestHandler):
+class SCPHandler(BaseHTTPRequestHandler):
 
     # Handler for the GET requests
     def do_GET(self):
@@ -24,7 +24,6 @@ class myHandler(BaseHTTPRequestHandler):
 
         print(question)
 
-
         model, tokenizer = m.get_model()
         status, answer = load.ask_question(question, model, tokenizer)
 
@@ -34,17 +33,13 @@ class myHandler(BaseHTTPRequestHandler):
         # Send the html message
 
         self.wfile.write(str({"status": str(status), "answer": answer}).encode())
-
-        #self.wfile.write(str(self.headers).encode())
-        #self.wfile.write(b"\n\n\n")
-        #self.wfile.write(str(self.path).encode())
         return
 
 
 try:
     # Create a web server and define the handler to manage the
     # incoming request
-    server = HTTPServer(('', PORT_NUMBER), myHandler)
+    server = HTTPServer(('', PORT_NUMBER), SCPHandler)
     print('Started httpserver on port ', PORT_NUMBER)
 
     # Wait forever for incoming http requests
@@ -53,3 +48,4 @@ try:
 except KeyboardInterrupt:
     print('^C received, shutting down the web server')
     server.socket.close()
+
