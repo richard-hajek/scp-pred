@@ -34,9 +34,3 @@ Answer:  euclid
 
 Process finished with exit code 0
 ```
-
-
-## Thanks to
-
-**Lada Nuzhna** ([@ladanuzhna](https://github.com/ladanuzhna)) for guidance and, not gonna lie, a big chunk of the source code. Check out her repo at [ladanuzhna/Question-Answering-BERT
-](https://github.com/ladanuzhna/Question-Answering-BERT)
