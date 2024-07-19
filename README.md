@@ -1,6 +1,6 @@
 # Secure, Contain, Protect and LEARN
 
-This is a DNN model which's goal is to understand, categorize and describe individuals, entities, locations, and objects that violate natural law. 
+This is a DNN model which's goal is to understand, categorize and describe individuals, entities, locations, and objects that violate natural law. The interface is reminiscent of the recently popular ChatGPT!
 
 ## Setup
 
